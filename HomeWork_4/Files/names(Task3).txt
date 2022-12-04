@@ -1,0 +1,6 @@
+IVANOV IVAN IVANOVICH : 5
+Petrov Petr Petrovich : 4
+SIDOROV SIDOR SIDOROVICH : 5
+Durakov Durak Durakovich : 2
+Phytonov Phyton Phytonovich : 3
+Gitov Git Gitovich : 3
