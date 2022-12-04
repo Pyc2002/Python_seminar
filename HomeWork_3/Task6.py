@@ -86,7 +86,7 @@ december_sal = Change_dictionary(monthly_salary, lucky_man)
 december_salary = open('Files/december_salary(HW3_Task6).txt', 'w')
 for key, value in december_sal.items():
     december_salary.write('{} : {}\n'.format(key,value))
-names.close
+december_sal.close()
     
 
 
