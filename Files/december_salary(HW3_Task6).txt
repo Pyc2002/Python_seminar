@@ -1,6 +1,6 @@
-Ivanov Ivan Ivanovich : 150000
-PETROV PETR PETROVICH : 200000
-Sidorov Sidor Sidorovich : 150000
+Ivanov Ivan Ivanovich : 75000
+PETROV PETR PETROVICH : 140000
+Sidorov Sidor Sidorovich : 120000
 DURAKOV DURAK DURAKOVICH : 200000
-Phytonov Phyton Phytonovich : 150000
-Gitov Git Gitovich : 150000
+Phytonov Phyton Phytonovich : 105000
+Gitov Git Gitovich : 120000

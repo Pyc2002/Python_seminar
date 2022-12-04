@@ -34,6 +34,8 @@ salary.write('50000\n')
 salary.write('70000\n')
 salary.write('80000\n')
 salary.write('100000\n')
+salary.write('70000\n')
+salary.write('80000\n')
 salary.close()
 
 
@@ -52,9 +54,13 @@ def Create_dictionary(text1, text2):
     
     
     dict ={}
-    for key in lines1:
-        for value in lines2: 
-            dict.update({key:value})
+    # for key in lines1:
+    #     for value in lines2:
+    #         dict.update({key:int(value)})
+
+    for i in range(0,len(lines1)):
+        dict[lines1[i]] = lines2[i]
+        dict.update({lines1[i]: int(lines2[i])})
     return dict
 
 def Change_dictionary(temp_dict, names):
@@ -69,7 +75,7 @@ def Change_dictionary(temp_dict, names):
     for key, value in temp_dict.items():
         if key in names:
             res_dict.update({key.upper():int(temp_dict[key])*2})
-        else: res_dict[key] = int(int(temp_dict[key])*1.5)
+        else: res_dict[key] = int(temp_dict[key]*1.5)
     return (res_dict)
 
 monthly_salary = Create_dictionary(names, salary)
