@@ -37,6 +37,7 @@ def Decoding_text(num):
     path = 'HomeWork_4/Files/secret(Task_4).txt'
     data = open(path, 'r')
     text = data.read()
+    data.close()
     new_text = ''
     alpha_list = [chr(i) for i in range(ord('a'), ord('z')+1)]
     alphabet = ''.join(alpha_list)
