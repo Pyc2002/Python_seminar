@@ -12,6 +12,7 @@
 # Это — 16-ричная система, поищите, как правильнее и быстрее получать эти символы.
 # Cложите получившиеся числа и верните из функции в качестве ответа вместе с преобразованным списком
 
+from functools import reduce
 
 def Create_tuple(languages, numbers):
     """ Create tupleon.
@@ -41,17 +42,25 @@ def Main(list_tuple):
             sum += ord(i)
         temp_list += (sum, item)
     print (temp_list) # для проверки
-    sum = 0
-    num_list = []
-    names = []
-    count = 4
-    for i in range(2, len(temp_list)-1, 2):
-        if temp_list[i] % (count/2) == 0:   # только это смог придумать (переменную count), чтоб не повторять работу, которую разирали на семинаре 
-            num_list.append(temp_list[i])
-            names.append(temp_list[i +1])
-            sum += temp_list[i]
-        count +=2 
-    result = list(zip(num_list, names))
+    # sum = 0
+    # num_list = []
+    # names = []
+    # count = 4
+    # for i in range(2, len(temp_list)-1, 2):
+    #     if temp_list[i] % (count/2) == 0:   # только это смог придумать (переменную count), чтоб не повторять работу, которую разирали на семинаре 
+    #         num_list.append(temp_list[i])
+    #         names.append(temp_list[i +1])
+    #         sum += temp_list[i]
+    #     count +=2 
+    # result = list(zip(num_list, names))
+    result_list = []
+    result = 0
+    for number, language in temp_list[::]:
+        points = reduce(lambda a,b: a+b, [ord(char) for char in language])
+    if points % number == 0:
+        result += points
+    result_list.append((points, language))
+
     return result, sum
 
  
